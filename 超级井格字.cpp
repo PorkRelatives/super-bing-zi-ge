@@ -1,11 +1,4 @@
 #include<iostream>
-//#include<cmath>
-//#include<cstdio>
-//#include<cstring>
-//#include<algorithm>
-//#include<queue>
-//#include<stack>
-//#include<map>
 using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22; 
 bool over = false,time1 = false,time2 = false,start1 = false,start2 = false;
@@ -123,7 +116,7 @@ int main(){
 	}
 	cout<<endl<<endl;
 	qipan[2][3] = 0;
-	//¿ªÊ¼
+	//å¼€å§‹
 	 
 	for(int iii = 1;over == false ; iii){
 		bool game = true;
@@ -153,7 +146,7 @@ int main(){
 						h=j;
 					}
 				}
-				//ºá×ÅµÄÈý¸öÏàµÈ 
+				//æ¨ªç€çš„ä¸‰ä¸ªç›¸ç­‰ 
 				
 				if( (qipan[i][j] == 1 && qipan[i+1][j] == 1 && qipan[i+2][j] == 1) || (qipan[i][j+1] == 1 && qipan[i+1][j+1] == 1 && qipan[i+2][j+1] == 1) || (qipan[i][j+2] == 1 && qipan[i+1][j+2] == 1 && qipan[i+2][j+2] == 1) ){
 					int k=i , h=j;
@@ -164,7 +157,7 @@ int main(){
 						h=j;
 					}
 				}
-				//Êú×ÅµÄÈý¸öÏàµÈ 
+				//ç«–ç€çš„ä¸‰ä¸ªç›¸ç­‰ 
 				
 				if(qipan[i][j] == 1 && qipan[i+1][j+1] == 1 && qipan[i+2][j+2] == 1){
 					int k=i , h=j;
@@ -184,7 +177,7 @@ int main(){
 						h=j;
 					}
 				}
-				//Ð±×ÅµÄÈý¸öÏàµÈ 
+				//æ–œç€çš„ä¸‰ä¸ªç›¸ç­‰ 
 				
 			}
 		}
@@ -224,7 +217,7 @@ int main(){
 						h=j;
 					}
 				}
-				//ºá×ÅµÄÈý¸öÏàµÈ 
+				//æ¨ªç€çš„ä¸‰ä¸ªç›¸ç­‰ 
 				
 				if((qipan[i][j] == 2 && qipan[i+1][j] == 2 && qipan[i+2][j] == 2) || (qipan[i][j+1] == 2 && qipan[i+1][j+1] == 2 && qipan[i+2][j+1] == 2) || (qipan[i][j+2] == 2 && qipan[i+1][j+2] == 2 && qipan[i+2][j+2] == 2)){
 					int k=i , h=j;
@@ -235,7 +228,7 @@ int main(){
 						h=j;
 					}
 				}
-				//Êú×ÅµÄÈý¸öÏàµÈ 
+				//ç«–ç€çš„ä¸‰ä¸ªç›¸ç­‰ 
 				
 				if(qipan[i][j] == 2 && qipan[i+1][j+1] == 2 && qipan[i+2][j+2] == 2){
 					int k=i , h=j;
@@ -255,7 +248,7 @@ int main(){
 						h=j;
 					}
 				}
-				//Ð±×ÅµÄÈý¸öÏàµÈ 
+				//æ–œç€çš„ä¸‰ä¸ªç›¸ç­‰ 
 				
 			}
 		}
