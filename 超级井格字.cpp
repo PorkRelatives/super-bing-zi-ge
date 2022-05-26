@@ -26,7 +26,8 @@ int playercin(int number){
 		x11=x;
 		y11=y;
 		time1 = true;
-	}else{
+	}
+	else{
 		int x=0,y=0;
 		cout<<"Player2 it is your turn!"<<endl;
 		cin>>y>>x;
@@ -36,10 +37,16 @@ int playercin(int number){
 	}
 }
 
-int player1(int x1,int y1){
+int player(int x1,int y1,int p){
 	if(qipan[x1][y1] == 0){
-		start1 = true;
-		qipan[x1][y1] = 1;
+		if(p==1){
+			start1 = true;
+			qipan[x1][y1] = 1;
+		} 
+		else if(p==2){
+			start2 = true;
+			qipan[x1][y1] = 2;
+		}
 		print();
 	}
 	else{
@@ -48,19 +55,6 @@ int player1(int x1,int y1){
 	}
 }
 
-int player2(int x2,int y2){
-	if(qipan[x2][y2] == 0){
-		start2 = true;
-		qipan[x2][y2] = 2;
-		print();
-	}
-	else{
-		cout<<"this place has been filled,please choose another place."<<endl;
-//		playercin(2);
-	}
-}
-
-
 int playeragain(int again){
 	if(again == 1){
 		int x=0,y=0;
@@ -68,7 +62,8 @@ int playeragain(int again){
 		cin>>y>>x;
 		x11=x;
 		y11=y;
-	}else{
+	}
+	else{
 		int x=0,y=0;
 		cout<<"Player2 it is your turn!"<<endl;
 		cin>>y>>x;
@@ -89,7 +84,7 @@ int main(){
 	print();
 	cout<<endl<<endl;
 	qipan[2][3] = 0;
-	//开始
+	//¿ªÊ¼
 	 
 	for(int iii = 1;over == false ; iii){
 		bool game = true;
@@ -103,7 +98,7 @@ int main(){
 			}else{
 				playeragain(1);
 			}
-			player1(x11,y11);
+			player(x11,y11,1);
 		}
 		for(int i = 1 ; i<=7 ; i = i+3){
 			for(int j = 1; j <= 7 ; j = j+3 ){
@@ -119,7 +114,7 @@ int main(){
 						h=j;
 					}
 				}
-				//横着的三个相等 
+				//ºá×ÅµÄÈý¸öÏàµÈ 
 				
 				if( (qipan[i][j] == 1 && qipan[i+1][j] == 1 && qipan[i+2][j] == 1) || (qipan[i][j+1] == 1 && qipan[i+1][j+1] == 1 && qipan[i+2][j+1] == 1) || (qipan[i][j+2] == 1 && qipan[i+1][j+2] == 1 && qipan[i+2][j+2] == 1) ){
 					int k=i , h=j;
@@ -130,7 +125,7 @@ int main(){
 						h=j;
 					}
 				}
-				//竖着的三个相等 
+				//Êú×ÅµÄÈý¸öÏàµÈ 
 				
 				if(qipan[i][j] == 1 && qipan[i+1][j+1] == 1 && qipan[i+2][j+2] == 1){
 					int k=i , h=j;
@@ -150,7 +145,7 @@ int main(){
 						h=j;
 					}
 				}
-				//斜着的三个相等 
+				//Ð±×ÅµÄÈý¸öÏàµÈ 
 				
 			}
 		}
@@ -171,10 +166,11 @@ int main(){
 		for(int jjj = 1;start2 == false ;jjj){
 			if(time2 == false){
 				playercin(2);
-			}else{
+			}
+			else{
 				playeragain(2);
 			}
-			player2(x22,y22);
+			player(x22,y22,2);
 		}
 		for(int i = 1 ; i<=7 ; i = i+3){
 			for(int j = 1; j <= 7 ; j = j+3 ){
@@ -190,7 +186,7 @@ int main(){
 						h=j;
 					}
 				}
-				//横着的三个相等 
+				//ºá×ÅµÄÈý¸öÏàµÈ 
 				
 				if((qipan[i][j] == 2 && qipan[i+1][j] == 2 && qipan[i+2][j] == 2) || (qipan[i][j+1] == 2 && qipan[i+1][j+1] == 2 && qipan[i+2][j+1] == 2) || (qipan[i][j+2] == 2 && qipan[i+1][j+2] == 2 && qipan[i+2][j+2] == 2)){
 					int k=i , h=j;
@@ -201,7 +197,7 @@ int main(){
 						h=j;
 					}
 				}
-				//竖着的三个相等 
+				//Êú×ÅµÄÈý¸öÏàµÈ 
 				
 				if(qipan[i][j] == 2 && qipan[i+1][j+1] == 2 && qipan[i+2][j+2] == 2){
 					int k=i , h=j;
@@ -221,7 +217,7 @@ int main(){
 						h=j;
 					}
 				}
-				//斜着的三个相等 
+				//Ð±×ÅµÄÈý¸öÏàµÈ 
 				
 			}
 		}
