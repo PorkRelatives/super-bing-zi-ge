@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int qipan[10][10],a,b,x11,y11,x22,y22; 
+int qipan[10][10],a,b,x11,y11; 
 bool over = false,time1 = false,time2 = false,start1 = false,start2 = false;
 
 void print(){
@@ -31,8 +31,8 @@ int playercin(int number){
 		int x=0,y=0;
 		cout<<"Player2 it is your turn!"<<endl;
 		cin>>y>>x;
-		x22=x;
-		y22=y;
+		x11=x;
+		y11=y;
 		time2 = true;
 	}
 }
@@ -67,15 +67,12 @@ int playeragain(int again){
 		int x=0,y=0;
 		cout<<"Player2 it is your turn!"<<endl;
 		cin>>y>>x;
-		x22=x;
-		y22=y;
+		x11=x;
+		y11=y;
 	}
 }
 
 int main(){
-//	qipan[4][9]=1;
-//	qipan[5][9]=1;
-//	qipan[6][9]=1;
 	cout << "the game of qipan" << endl;
 	print();
 	cout << "player 1 is '1' , player 2 is '2' "<<endl<<endl;
@@ -170,7 +167,7 @@ int main(){
 			else{
 				playeragain(2);
 			}
-			player(x22,y22,2);
+			player(x11,y11,2);
 		}
 		for(int i = 1 ; i<=7 ; i = i+3){
 			for(int j = 1; j <= 7 ; j = j+3 ){
