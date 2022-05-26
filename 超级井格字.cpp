@@ -18,14 +18,13 @@ void print(){
 	}	
 }
 
-int playercin(int number){
+void playeragain(int number){
 	if(number == 1){
 		int x=0,y=0;
 		cout<<"Player1 it is your turn!"<<endl;
 		cin>>y>>x;
 		x11=x;
 		y11=y;
-		time1 = true;
 	}
 	else{
 		int x=0,y=0;
@@ -33,11 +32,21 @@ int playercin(int number){
 		cin>>y>>x;
 		x11=x;
 		y11=y;
+	}
+}
+
+void playerfirst(int number){
+	if(number == 1){
+		playeragain(1);
+		time1 = true;
+	}
+	else{
+		playeragain(2);
 		time2 = true;
 	}
 }
 
-int player(int x1,int y1,int p){
+void player(int x1,int y1,int p){
 	if(qipan[x1][y1] == 0){
 		if(p==1){
 			start1 = true;
@@ -51,24 +60,6 @@ int player(int x1,int y1,int p){
 	}
 	else{
 		cout<<"this place has been filled,please choose another place."<<endl;
-//		playercin(1);
-	}
-}
-
-int playeragain(int again){
-	if(again == 1){
-		int x=0,y=0;
-		cout<<"Player1 it is your turn!"<<endl;
-		cin>>y>>x;
-		x11=x;
-		y11=y;
-	}
-	else{
-		int x=0,y=0;
-		cout<<"Player2 it is your turn!"<<endl;
-		cin>>y>>x;
-		x11=x;
-		y11=y;
 	}
 }
 
@@ -91,8 +82,9 @@ int main(){
 		time2 = false;
 		for(int jjj = 1;start1 == false ; jjj){	
 			if(time1 == false){	
-				playercin(1);
-			}else{
+				playerfirst(1);
+			}
+			else{
 				playeragain(1);
 			}
 			player(x11,y11,1);
@@ -162,13 +154,14 @@ int main(){
 		game = true; 
 		for(int jjj = 1;start2 == false ;jjj){
 			if(time2 == false){
-				playercin(2);
+				playerfirst(2);
 			}
 			else{
 				playeragain(2);
 			}
 			player(x11,y11,2);
 		}
+		
 		for(int i = 1 ; i<=7 ; i = i+3){
 			for(int j = 1; j <= 7 ; j = j+3 ){
 				if((qipan[i][j] == 2 && qipan[i][j+1] == 2 && qipan[i][j+2] == 2) || (qipan[i+1][j] == 2 && qipan[i+1][j+1] == 2 && qipan[i+1][j+2] == 2) || (qipan[i+2][j] == 2 && qipan[i+2][j+1] == 2 && qipan[i+2][j+2] == 2)){
@@ -218,6 +211,7 @@ int main(){
 				
 			}
 		}
+		
 		for(int i=1;i<=9;i++){
 			for(int j=1;j<=3;j++){
 				if(qipan[i][j] == 0 || qipan[i][j] == 1){
