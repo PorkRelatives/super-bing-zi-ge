@@ -3,6 +3,21 @@ using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22; 
 bool over = false,time1 = false,time2 = false,start1 = false,start2 = false;
 
+void print(){
+	for(int i = 1;i <= 9;i ++ ){
+		for(int j = 1;j <= 9;j ++ ){
+			cout << qipan[i][j] << " ";
+			if(j == 3 || j == 6){
+				cout << "|";
+			}
+		}
+		if(i == 3 || i == 6){
+			cout << endl << "------+------+------";
+		}
+		cout << endl;
+	}	
+}
+
 int playercin(int number){
 	if(number == 1){
 		int x=0,y=0;
@@ -25,19 +40,9 @@ int player1(int x1,int y1){
 	if(qipan[x1][y1] == 0){
 		start1 = true;
 		qipan[x1][y1] = 1;
-		for(int i = 1;i <= 9;i ++ ){
-			for(int j = 1;j <= 9;j ++ ){
-				cout << qipan[i][j] << " ";
-				if(j % 3 == 0 && j != 9){
-					cout << "|";
-				}
-			}
-			if(i % 3 == 0 && i != 9){
-				cout << endl << "------+------+------";
-			}
-			cout << endl;
-		}
-	}else{
+		print();
+	}
+	else{
 		cout<<"this place has been filled,please choose another place."<<endl;
 //		playercin(1);
 	}
@@ -47,19 +52,9 @@ int player2(int x2,int y2){
 	if(qipan[x2][y2] == 0){
 		start2 = true;
 		qipan[x2][y2] = 2;
-		for(int i = 1;i <= 9;i ++ ){
-			for(int j = 1;j <= 9;j ++ ){
-				cout << qipan[i][j] << " ";
-				if(j % 3 == 0 && j != 9){
-					cout << "|";
-				}
-			}
-			if(i % 3 == 0 && i != 9){
-				cout << endl << "------+------+------";
-			}
-			cout << endl;
-		}
-	}else{
+		print();
+	}
+	else{
 		cout<<"this place has been filled,please choose another place."<<endl;
 //		playercin(2);
 	}
@@ -87,33 +82,11 @@ int main(){
 //	qipan[5][9]=1;
 //	qipan[6][9]=1;
 	cout << "the game of qipan" << endl;
-	for(int i = 1;i <= 9;i ++ ){
-		for(int j = 1;j <= 9;j ++ ){
-			cout << qipan[i][j] << " ";
-			if(j % 3 == 0 && j != 9){
-				cout << "|";
-			}
-		}
-		if(i % 3 == 0 && i != 9){
-			cout << endl << "------+------+------";
-		}
-		cout << endl;
-	}
+	print();
 	cout << "player 1 is '1' , player 2 is '2' "<<endl<<endl;
 	cout << "If you want to change the place (2,3) , you can type the '2 3' , then the qipan will become like this : " << endl <<endl ;
 	qipan[2][3] = 1;
-	for(int i = 1;i <= 9;i ++ ){
-		for(int j = 1;j <= 9;j ++ ){
-			cout << qipan[i][j] << " ";
-			if(j % 3 == 0 && j != 9){
-				cout << "|";
-			}
-		}
-		if(i % 3 == 0 && i != 9){
-			cout << endl << "------+------+------";
-		}
-		cout << endl;
-	}
+	print();
 	cout<<endl<<endl;
 	qipan[2][3] = 0;
 	//开始
@@ -284,4 +257,3 @@ int main(){
 
 	return 0;
 }
-
