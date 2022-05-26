@@ -84,7 +84,7 @@ int main(){
 	print();
 	cout<<endl<<endl;
 	qipan[2][3] = 0;
-	//¿ªÊ¼
+	//开始
 	 
 	for(int iii = 1;over == false ; iii){
 		bool game = true;
@@ -114,7 +114,7 @@ int main(){
 						h=j;
 					}
 				}
-				//ºá×ÅµÄÈý¸öÏàµÈ 
+				//横着的三个相等 
 				
 				if( (qipan[i][j] == 1 && qipan[i+1][j] == 1 && qipan[i+2][j] == 1) || (qipan[i][j+1] == 1 && qipan[i+1][j+1] == 1 && qipan[i+2][j+1] == 1) || (qipan[i][j+2] == 1 && qipan[i+1][j+2] == 1 && qipan[i+2][j+2] == 1) ){
 					int k=i , h=j;
@@ -125,7 +125,7 @@ int main(){
 						h=j;
 					}
 				}
-				//Êú×ÅµÄÈý¸öÏàµÈ 
+				//竖着的三个相等 
 				
 				if(qipan[i][j] == 1 && qipan[i+1][j+1] == 1 && qipan[i+2][j+2] == 1){
 					int k=i , h=j;
@@ -145,7 +145,7 @@ int main(){
 						h=j;
 					}
 				}
-				//Ð±×ÅµÄÈý¸öÏàµÈ 
+				//斜着的三个相等 
 				
 			}
 		}
@@ -186,7 +186,7 @@ int main(){
 						h=j;
 					}
 				}
-				//ºá×ÅµÄÈý¸öÏàµÈ 
+				//横着的三个相等 
 				
 				if((qipan[i][j] == 2 && qipan[i+1][j] == 2 && qipan[i+2][j] == 2) || (qipan[i][j+1] == 2 && qipan[i+1][j+1] == 2 && qipan[i+2][j+1] == 2) || (qipan[i][j+2] == 2 && qipan[i+1][j+2] == 2 && qipan[i+2][j+2] == 2)){
 					int k=i , h=j;
@@ -197,7 +197,7 @@ int main(){
 						h=j;
 					}
 				}
-				//Êú×ÅµÄÈý¸öÏàµÈ 
+				//竖着的三个相等 
 				
 				if(qipan[i][j] == 2 && qipan[i+1][j+1] == 2 && qipan[i+2][j+2] == 2){
 					int k=i , h=j;
@@ -217,7 +217,7 @@ int main(){
 						h=j;
 					}
 				}
-				//Ð±×ÅµÄÈý¸öÏàµÈ 
+				//斜着的三个相等 
 				
 			}
 		}
@@ -234,22 +234,6 @@ int main(){
 		}
 		//player2 
 	}
-//	for(int i = 1;i <= 9;i ++ ){
-//		for(int j = 1;j <= 9;j ++ ){
-//			cout << qipan[i][j] << " ";
-//			if(j % 3 == 0 && j != 9){
-//				cout << "|";
-//			}
-//		}
-//		if(i % 3 == 0 && i != 9){
-//			cout << endl << "------+------+------";
-//		}
-//		cout << endl;
-//	}
-
-
-
-
 
 	return 0;
 }
