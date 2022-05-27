@@ -4,18 +4,17 @@ using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22,atplace; 
 bool over = false,time1 = false,time2 = false,start1 = false,start2 = false;
 int print(){
-	//SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_RED|BACKGROUND_GREEN|BACKGROUND_BLUE);
 	for(int i = 1;i <= 9;i ++ ){
 		for(int j = 1;j <= 9;j ++ ){
 			if(qipan[i][j] == 1){
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN|FOREGROUND_RED);
-				cout << qipan[i][j] << " ";
+				cout << "O" << " ";
 			}else if(qipan[i][j] == 2){
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
-				cout << qipan[i][j] << " ";
+				cout << "X" << " ";
 			}else{
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE|FOREGROUND_GREEN);
-				cout<< qipan[i][j]<<" ";
+				cout<< "0" <<" ";
 			}
 			if(j % 3 == 0 && j != 9){
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
