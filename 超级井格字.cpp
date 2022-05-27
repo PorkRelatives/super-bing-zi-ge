@@ -3,8 +3,8 @@
 using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22,atplace; 
 bool over = false,time1 = false,time2 = false,start1 = false,start2 = false;
-int daying(){
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_RED|BACKGROUND_GREEN|BACKGROUND_BLUE);
+int print(){
+	//SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_RED|BACKGROUND_GREEN|BACKGROUND_BLUE);
 	for(int i = 1;i <= 9;i ++ ){
 		for(int j = 1;j <= 9;j ++ ){
 			if(qipan[i][j] == 1){
@@ -601,7 +601,7 @@ int player1(int x1,int y1){
 		if(qipan[x1][y1] == 0){
 			start1 = true;
 			qipan[x1][y1] = 1;
-			daying();
+			print();
 		}else{
 			cout<<"this place has been filled,please choose another place."<<endl;
 		}
@@ -610,7 +610,7 @@ int player1(int x1,int y1){
 			if(qipan[x1][y1] == 0){
 				start1 = true;
 				qipan[x1][y1] = 1;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -623,7 +623,7 @@ int player1(int x1,int y1){
 			if(qipan[x1][y1] == 0){
 				start1 = true;
 				qipan[x1][y1] = 1;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -636,7 +636,7 @@ int player1(int x1,int y1){
 			if(qipan[x1][y1] == 0){
 				start1 = true;
 				qipan[x1][y1] = 1;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -649,7 +649,7 @@ int player1(int x1,int y1){
 			if(qipan[x1][y1] == 0){
 				start1 = true;
 				qipan[x1][y1] = 1;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -662,7 +662,7 @@ int player1(int x1,int y1){
 			if(qipan[x1][y1] == 0){
 				start1 = true;
 				qipan[x1][y1] = 1;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -675,7 +675,7 @@ int player1(int x1,int y1){
 			if(qipan[x1][y1] == 0){
 				start1 = true;
 				qipan[x1][y1] = 1;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -688,7 +688,7 @@ int player1(int x1,int y1){
 			if(qipan[x1][y1] == 0){
 				start1 = true;
 				qipan[x1][y1] = 1;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -701,7 +701,7 @@ int player1(int x1,int y1){
 			if(qipan[x1][y1] == 0){
 				start1 = true;
 				qipan[x1][y1] = 1;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -714,7 +714,7 @@ int player1(int x1,int y1){
 			if(qipan[x1][y1] == 0){
 				start1 = true;
 				qipan[x1][y1] = 1;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -730,7 +730,7 @@ int player2(int x2,int y2){
 		if(qipan[x2][y2] == 0){
 			start2 = true;
 			qipan[x2][y2] = 2;
-			daying();
+			print();
 		}else{
 			cout<<"this place has been filled,please choose another place."<<endl;
 		}
@@ -739,7 +739,7 @@ int player2(int x2,int y2){
 			if(qipan[x2][y2] == 0){
 				start2 = true;
 				qipan[x2][y2] = 2;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -752,7 +752,7 @@ int player2(int x2,int y2){
 			if(qipan[x2][y2] == 0){
 				start2 = true;
 				qipan[x2][y2] = 2;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -765,7 +765,7 @@ int player2(int x2,int y2){
 			if(qipan[x2][y2] == 0){
 				start2 = true;
 				qipan[x2][y2] = 2;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -778,7 +778,7 @@ int player2(int x2,int y2){
 			if(qipan[x2][y2] == 0){
 				start2 = true;
 				qipan[x2][y2] = 2;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -791,7 +791,7 @@ int player2(int x2,int y2){
 			if(qipan[x2][y2] == 0){
 				start2 = true;
 				qipan[x2][y2] = 2;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -804,7 +804,7 @@ int player2(int x2,int y2){
 			if(qipan[x2][y2] == 0){
 				start2 = true;
 				qipan[x2][y2] = 2;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -817,7 +817,7 @@ int player2(int x2,int y2){
 			if(qipan[x2][y2] == 0){
 				start2 = true;
 				qipan[x2][y2] = 2;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -830,7 +830,7 @@ int player2(int x2,int y2){
 			if(qipan[x2][y2] == 0){
 				start2 = true;
 				qipan[x2][y2] = 2;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -843,7 +843,7 @@ int player2(int x2,int y2){
 			if(qipan[x2][y2] == 0){
 				start2 = true;
 				qipan[x2][y2] = 2;
-				daying();
+				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
 			}
@@ -895,18 +895,18 @@ int main(){
 //	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE|FOREGROUND_GREEN);
 //	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_INTENSITY);
 	cout << "the game of qipan" << endl;
-	daying();
+	print();
 //	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_INTENSITY);
 	cout << "player 1 is '1' , player 2 is '2' "<<endl<<endl;
 	cout << "If you want to change the place (3,2) , you can type the '3 2' , then the qipan will become like this : " << endl <<endl ;
 	qipan[2][3] = 1;
-	daying();
+	print();
 	cout<<endl<<endl;
 	qipan[2][3] = 0;
 	//开始
 	
 	cout<<endl<<"NOW START!"<<endl;
-	daying();
+	print();
 	for(int iii = 1;over == false ; iii){
 		bool game = true;
 		start1 = false;
@@ -979,7 +979,7 @@ int main(){
 				}
 				if(game == true){
 					cout<<endl;
-					daying();
+					print();
 					cout<<"Congratuations! player1 wins!"<<endl;
 					over = true;
 					return 0;
@@ -1001,7 +1001,7 @@ int main(){
 				}
 				if(game == true){
 					cout<<endl;
-					daying();
+					print();
 					cout<<"Congratuations! player1 wins!"<<endl;
 					over = true;
 					return 0;
@@ -1020,7 +1020,7 @@ int main(){
 		}
 		if(game == true){
 			cout<<endl;
-			daying();
+			print();
 			cout<<"Congratuations! player1 wins!"<<endl;
 			over = true;
 			return 0;
@@ -1097,7 +1097,7 @@ int main(){
 				}
 				if(game == true){
 					cout<<endl;
-					daying();
+					print();
 					cout<<"Congratuations! player2 wins!"<<endl;
 					over = true;
 					return 0;
@@ -1119,7 +1119,7 @@ int main(){
 				}
 				if(game == true){
 					cout<<endl;
-					daying();
+					print();
 					cout<<"Congratuations! player2 wins!"<<endl;
 					over = true;
 					return 0;
@@ -1138,7 +1138,7 @@ int main(){
 		}
 		if(game == true){
 			cout<<endl;
-			daying();
+			print();
 			cout<<"Congratuations! player2 wins!"<<endl;
 			over = true;
 			return 0;
