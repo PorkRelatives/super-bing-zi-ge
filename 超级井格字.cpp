@@ -1,11 +1,4 @@
 #include<iostream>
-#include<cmath>
-#include<cstdio>
-#include<cstring>
-#include<algorithm>
-#include<queue>
-#include<stack>
-#include<map>
 #include<windows.h> 
 using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22,atplace; 
