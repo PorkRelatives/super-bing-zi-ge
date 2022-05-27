@@ -10,21 +10,30 @@
 using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22,atplace; 
 bool over = false,time1 = false,time2 = false,start1 = false,start2 = false;
-
 int daying(){
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_RED|BACKGROUND_GREEN|BACKGROUND_BLUE);
 	for(int i = 1;i <= 9;i ++ ){
 		for(int j = 1;j <= 9;j ++ ){
-			cout << qipan[i][j] << " ";
-			if(j % 3 == 0 && j != 9){
+			if(qipan[i][j] == 1){
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN|FOREGROUND_RED);
+				cout << qipan[i][j] << " ";
+			}else if(qipan[i][j] == 2){
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+				cout << qipan[i][j] << " ";
+			}else{
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE|FOREGROUND_GREEN);
+				cout<< qipan[i][j]<<" ";
+			}
+			if(j % 3 == 0 && j != 9){
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
 				cout << "|";
-				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE|FOREGROUND_GREEN);
 			}
 		}
 		if(i % 3 == 0 && i != 9){
-			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
 			cout << endl << "------+------+------";
-			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE|FOREGROUND_GREEN);
 		}
 		cout << endl;
 	}
@@ -890,9 +899,11 @@ int main(){
 //	qipan[7][1]=1;
 //	qipan[8][2]=1;
 //	qipan[9][3]=1;
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
+//	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE|FOREGROUND_GREEN);
+//	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_INTENSITY);
 	cout << "the game of qipan" << endl;
 	daying();
+//	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), BACKGROUND_INTENSITY);
 	cout << "player 1 is '1' , player 2 is '2' "<<endl<<endl;
 	cout << "If you want to change the place (3,2) , you can type the '3 2' , then the qipan will become like this : " << endl <<endl ;
 	qipan[2][3] = 1;
