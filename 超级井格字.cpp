@@ -6,6 +6,7 @@
 #include<queue>
 #include<stack>
 #include<map>
+#include<windows.h> 
 using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22,atplace; 
 bool over = false,time1 = false,time2 = false,start1 = false,start2 = false;
@@ -15,11 +16,15 @@ int daying(){
 		for(int j = 1;j <= 9;j ++ ){
 			cout << qipan[i][j] << " ";
 			if(j % 3 == 0 && j != 9){
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
 				cout << "|";
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
 			}
 		}
 		if(i % 3 == 0 && i != 9){
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
 			cout << endl << "------+------+------";
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
 		}
 		cout << endl;
 	}
@@ -885,6 +890,7 @@ int main(){
 //	qipan[7][1]=1;
 //	qipan[8][2]=1;
 //	qipan[9][3]=1;
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
 	cout << "the game of qipan" << endl;
 	daying();
 	cout << "player 1 is '1' , player 2 is '2' "<<endl<<endl;
