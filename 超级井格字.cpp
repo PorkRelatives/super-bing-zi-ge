@@ -2,7 +2,8 @@
 #include<windows.h> 
 using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22,atplace; 
-bool over = false,time1 = false,time2 = false,start1 = false,start2 = false;
+bool over = false,time1 = false,time2 = false/*,start1 = false,start2 = false*/;
+bool start[3]={false};
 int print(){
 	for(int i = 1;i <= 9;i ++ ){
 		for(int j = 1;j <= 9;j ++ ){
@@ -595,11 +596,11 @@ int ap(int x,int y){
 	}
 }
 
-int player1(int x1,int y1){
+int player(int x1,int y1,int p){
 	if(atplace == 0){
 		if(qipan[x1][y1] == 0){
-			start1 = true;
-			qipan[x1][y1] = 1;
+			start[p] = true;
+			qipan[x1][y1] = p;
 			print();
 		}else{
 			cout<<"this place has been filled,please choose another place."<<endl;
@@ -607,8 +608,8 @@ int player1(int x1,int y1){
 	}else if(atplace == 1){
 		if(x1 >= 1 && x1 <= 3 && y1 >= 1 && y1 <= 3){
 			if(qipan[x1][y1] == 0){
-				start1 = true;
-				qipan[x1][y1] = 1;
+				start[p] = true;
+				qipan[x1][y1] = p;
 				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
@@ -620,8 +621,8 @@ int player1(int x1,int y1){
 	}else if(atplace == 2){
 		if(x1 >= 1 && x1 <= 3 && y1 >= 4 && y1 <= 6){
 			if(qipan[x1][y1] == 0){
-				start1 = true;
-				qipan[x1][y1] = 1;
+				start[p] = true;
+				qipan[x1][y1] = p;
 				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
@@ -633,8 +634,8 @@ int player1(int x1,int y1){
 	}else if(atplace == 3){
 		if(x1 >= 1 && x1 <= 3 && y1 >= 7 && y1 <= 9){
 			if(qipan[x1][y1] == 0){
-				start1 = true;
-				qipan[x1][y1] = 1;
+				start[p] = true;
+				qipan[x1][y1] = p;
 				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
@@ -646,8 +647,8 @@ int player1(int x1,int y1){
 	}else if(atplace == 4){
 		if(x1 >= 4 && x1 <= 6 && y1 >= 1 && y1 <= 3){
 			if(qipan[x1][y1] == 0){
-				start1 = true;
-				qipan[x1][y1] = 1;
+				start[p] = true;
+				qipan[x1][y1] = p;
 				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
@@ -659,8 +660,8 @@ int player1(int x1,int y1){
 	}else if(atplace == 5){
 		if(x1 >= 4 && x1 <= 6 && y1 >= 4 && y1 <= 6){
 			if(qipan[x1][y1] == 0){
-				start1 = true;
-				qipan[x1][y1] = 1;
+				start[p] = true;
+				qipan[x1][y1] = p;
 				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
@@ -672,8 +673,8 @@ int player1(int x1,int y1){
 	}else if(atplace == 6){
 		if(x1 >= 4 && x1 <= 6 && y1 >= 7 && y1 <= 9){
 			if(qipan[x1][y1] == 0){
-				start1 = true;
-				qipan[x1][y1] = 1;
+				start[p] = true;
+				qipan[x1][y1] = p;
 				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
@@ -685,8 +686,8 @@ int player1(int x1,int y1){
 	}else if(atplace == 7){
 		if(x1 >= 7 && x1 <= 9 && y1 >= 1 && y1 <= 3){
 			if(qipan[x1][y1] == 0){
-				start1 = true;
-				qipan[x1][y1] = 1;
+				start[p] = true;
+				qipan[x1][y1] = p;
 				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
@@ -698,8 +699,8 @@ int player1(int x1,int y1){
 	}else if(atplace == 8){
 		if(x1 >= 7 && x1 <= 9 && y1 >= 4 && y1 <= 6){
 			if(qipan[x1][y1] == 0){
-				start1 = true;
-				qipan[x1][y1] = 1;
+				start[p] = true;
+				qipan[x1][y1] = p;
 				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
@@ -711,8 +712,8 @@ int player1(int x1,int y1){
 	}else if(atplace == 9){
 		if(x1 >= 7 && x1 <= 9 && y1 >= 7 && y1 <= 9){
 			if(qipan[x1][y1] == 0){
-				start1 = true;
-				qipan[x1][y1] = 1;
+				start[p] = true;
+				qipan[x1][y1] = p;
 				print();
 			}else{
 				cout<<"this place has been filled,please choose another place."<<endl;
@@ -724,6 +725,7 @@ int player1(int x1,int y1){
 	}
 }
 
+/*
 int player2(int x2,int y2){
 	if(atplace == 0){	
 		if(qipan[x2][y2] == 0){
@@ -852,6 +854,7 @@ int player2(int x2,int y2){
 		}
 	}
 }
+*/
 
 int playeragain(int again){
 	if(again == 1){
@@ -908,15 +911,15 @@ int main(){
 	print();
 	for(int iii = 1;over == false ; iii){
 		bool game = true;
-		start1 = false;
-		start2 = false;
-		for(int jjj = 1;start1 == false ; jjj){	
+		start[1] = false;
+		start[2] = false;
+		for(int jjj = 1;start[1] == false ; jjj){	
 			if(time1 == false){	
 				playercin(1);
 			}else{
 				playeragain(1);
 			}
-			player1(x11,y11);
+			player(x11,y11,1);
 		}
 		for(int i = 1 ; i<=7 ; i = i+3){
 			for(int j = 1; j <= 7 ; j = j+3 ){
@@ -1028,13 +1031,13 @@ int main(){
 		//player1
 		
 		game = true; 
-		for(int jjj = 1;start2 == false ;jjj){
+		for(int jjj = 1;start[2] == false ;jjj){
 			if(time2 == false){
 				playercin(2);
 			}else{
 				playeragain(2);
 			}
-			player2(x22,y22);
+			player(x22,y22,2);
 		}
 		for(int i = 1 ; i<=7 ; i = i+3){
 			for(int j = 1; j <= 7 ; j = j+3 ){
