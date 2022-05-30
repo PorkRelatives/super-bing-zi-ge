@@ -12,4 +12,27 @@ This is a game that can only be played by two people. The checkerboard is a 9×9
 0 0 0 | 0 0 0 | 0 0 0                                   
 0 0 0 | 0 0 0 | 0 0 0                                   
 like this.
-When we type in the 
+When player1 type in the "2 3",then the chart will like this:     
+0 0 0 | 0 0 0 | 0 0 0                                    
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 O 0 | 0 0 0 | 0 0 0                                   
+—-—+——+——-                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+—-—+——+——-                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+When player2 type in the "2 3",then the chart will like this:     
+0 0 0 | 0 0 0 | 0 0 0                                    
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 X 0 | 0 0 0 | 0 0 0                                   
+—-—+——+——-                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+—-—+——+——-                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
+0 0 0 | 0 0 0 | 0 0 0                                   
