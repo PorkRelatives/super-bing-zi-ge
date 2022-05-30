@@ -54,7 +54,11 @@ int ap(int x,int y){
 	if(x >= 1 && x <=3 && y >= 1 && y <= 3){
 		if(x == y){
 			if(x == 2){
-				atplace = 5;
+				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
+					atplace = 0;
+				}else{
+					atplace = 5;
+				}
 			}else if(x == 1){
 				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
 					atplace = 0;
@@ -365,7 +369,11 @@ int ap(int x,int y){
 	if(x >= 4 && x <=6 && y >= 7 && y <= 9){
 		if(x+3 == y){
 			if(x == 5){
-				atplace = 5;
+				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
+					atplace = 0;
+				}else{
+					atplace = 5;
+				}
 			}else if(x == 4){
 				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
 					atplace = 0;
@@ -483,7 +491,11 @@ int ap(int x,int y){
 	if(x >= 7 && x <=9 && y >= 4 && y <= 6){
 		if(x-3 == y){
 			if(x == 8){
-				atplace = 5;
+				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
+					atplace = 0;
+				}else{
+					atplace = 5;
+				}
 			}else if(x == 7){
 				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
 					atplace = 0;
@@ -542,7 +554,11 @@ int ap(int x,int y){
 	if(x >= 7 && x <=9 && y >= 7 && y <= 9){
 		if(x == y){
 			if(x == 8){
-				atplace = 5;
+				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
+					atplace = 0;
+				}else{
+					atplace = 5;
+				}
 			}else if(x == 7){
 				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
 					atplace = 0;
