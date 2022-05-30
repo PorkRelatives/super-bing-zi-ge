@@ -2,7 +2,7 @@
 #include<windows.h> 
 using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22,atplace; 
-bool over = false,time1 = false,time2 = false/*,start1 = false,start2 = false*/;
+bool over = false,time1 = false,time2 = false;
 bool start[3]={false};
 int print(){
 	for(int i = 1;i <= 9;i ++ ){
@@ -20,13 +20,11 @@ int print(){
 			if(j % 3 == 0 && j != 9){
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
 				cout << "|";
-				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE|FOREGROUND_GREEN);
 			}
 		}
 		if(i % 3 == 0 && i != 9){
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
 			cout << endl << "------+------+------";
-			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE|FOREGROUND_GREEN);
 		}
 		cout << endl;
 	}
@@ -741,136 +739,6 @@ int player(int x1,int y1,int p){
 	}
 }
 
-/*
-int player2(int x2,int y2){
-	if(atplace == 0){	
-		if(qipan[x2][y2] == 0){
-			start2 = true;
-			qipan[x2][y2] = 2;
-			print();
-		}else{
-			cout<<"this place has been filled,please choose another place."<<endl;
-		}
-	}else if(atplace == 1){
-		if(x2 >= 1 && x2 <= 3 && y2 >= 1 && y2 <= 3){
-			if(qipan[x2][y2] == 0){
-				start2 = true;
-				qipan[x2][y2] = 2;
-				print();
-			}else{
-				cout<<"this place has been filled,please choose another place."<<endl;
-			}
-		}else{
-			cout<<"this place is not allowed,please choose another place."<<endl;
-			time2 = false;
-		}
-	}else if(atplace == 2){
-		if(x2 >= 1 && x2 <= 3 && y2 >= 4 && y2 <= 6){
-			if(qipan[x2][y2] == 0){
-				start2 = true;
-				qipan[x2][y2] = 2;
-				print();
-			}else{
-				cout<<"this place has been filled,please choose another place."<<endl;
-			}
-		}else{
-			cout<<"this place is not allowed,please choose another place."<<endl;
-			time2 = false;
-		}
-	}else if(atplace == 3){
-		if(x2 >= 1 && x2 <= 3 && y2 >= 7 && y2 <= 9){
-			if(qipan[x2][y2] == 0){
-				start2 = true;
-				qipan[x2][y2] = 2;
-				print();
-			}else{
-				cout<<"this place has been filled,please choose another place."<<endl;
-			}
-		}else{
-			cout<<"this place is not allowed,please choose another place."<<endl;
-			time2 = false;
-		}
-	}else if(atplace == 4){
-		if(x2 >= 4 && x2 <= 6 && y2 >= 1 && y2 <= 3){
-			if(qipan[x2][y2] == 0){
-				start2 = true;
-				qipan[x2][y2] = 2;
-				print();
-			}else{
-				cout<<"this place has been filled,please choose another place."<<endl;
-			}
-		}else{
-			cout<<"this place is not allowed,please choose another place."<<endl;
-			time2 = false;
-		}
-	}else if(atplace == 5){
-		if(x2 >= 4 && x2 <= 6 && y2 >= 4 && y2 <= 6){
-			if(qipan[x2][y2] == 0){
-				start2 = true;
-				qipan[x2][y2] = 2;
-				print();
-			}else{
-				cout<<"this place has been filled,please choose another place."<<endl;
-			}
-		}else{
-			cout<<"this place is not allowed,please choose another place."<<endl;
-			time2 = false;
-		}
-	}else if(atplace == 6){
-		if(x2 >= 4 && x2 <= 6 && y2 >= 7 && y2 <= 9){
-			if(qipan[x2][y2] == 0){
-				start2 = true;
-				qipan[x2][y2] = 2;
-				print();
-			}else{
-				cout<<"this place has been filled,please choose another place."<<endl;
-			}
-		}else{
-			cout<<"this place is not allowed,please choose another place."<<endl;
-			time2 = false;
-		}
-	}else if(atplace == 7){
-		if(x2 >= 7 && x2 <= 9 && y2 >= 1 && y2 <= 3){
-			if(qipan[x2][y2] == 0){
-				start2 = true;
-				qipan[x2][y2] = 2;
-				print();
-			}else{
-				cout<<"this place has been filled,please choose another place."<<endl;
-			}
-		}else{
-			cout<<"this place is not allowed,please choose another place."<<endl;
-			time2 = false;
-		}
-	}else if(atplace == 8){
-		if(x2 >= 7 && x2 <= 9 && y2 >= 4 && y2 <= 6){
-			if(qipan[x2][y2] == 0){
-				start2 = true;
-				qipan[x2][y2] = 2;
-				print();
-			}else{
-				cout<<"this place has been filled,please choose another place."<<endl;
-			}
-		}else{
-			cout<<"this place is not allowed,please choose another place."<<endl;
-			time2 = false;
-		}
-	}else if(atplace == 9){
-		if(x2 >= 7 && x2 <= 9 && y2 >= 7 && y2 <= 9){
-			if(qipan[x2][y2] == 0){
-				start2 = true;
-				qipan[x2][y2] = 2;
-				print();
-			}else{
-				cout<<"this place has been filled,please choose another place."<<endl;
-			}
-		}else{
-			cout<<"this place is not allowed,please choose another place."<<endl;
-			time2 = false;
-		}
-	}
-}
-*/
 
 int playeragain(int again){
 	if(again == 1){
@@ -889,18 +757,6 @@ int playeragain(int again){
 }
 
 int main(){
-//	for(int i = 1;i <= 9;i ++ ){
-//		for(int j = 1;j <= 9;j ++ ){
-//			cout << qipan[i][j] << " ";
-//			if(j % 3 == 0 && j != 9){
-//				cout << "|";
-//			}
-//		}
-//		if(i % 3 == 0 && i != 9){
-//			cout << endl << "------+------+------";
-//		}
-//		cout << endl;
-//	}
 //	qipan[1][1]=1;
 //	qipan[2][2]=1;
 //	qipan[3][3]=1;
@@ -1102,7 +958,7 @@ int main(){
 			}
 		}
 		ap(x22,y22);
-		game = true;
+		//game = true;
 		for(int a = 1;a<=7;a=a+3){
 			game = true;
 			for(int b = 1;b<=7;b=b+3){	
@@ -1124,7 +980,7 @@ int main(){
 		}
 		//横着三个胜利
 		
-		game = true;
+		//game = true;
 		for(int b = 1;b<=7;b=b+3){
 			game = true;
 			for(int a = 1;a<=7;a=a+3){	
@@ -1146,7 +1002,7 @@ int main(){
 		}
 		//竖着三个胜利
 		
-		game = true;
+		//game = true;
 		for(int ab = 1;ab <= 9;ab = ab + 2){
 			for(int ac = ab;ac <= ab; ac = ac + 2){
 				if(qipan[ab][ac] == 0 || qipan[ab][ac] == 1){
@@ -1166,10 +1022,6 @@ int main(){
 		//player2 
 	}
 
-
-
-
-
-
+	system("pause");
 	return 0;
 }
