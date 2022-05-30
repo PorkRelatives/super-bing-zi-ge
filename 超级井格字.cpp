@@ -48,564 +48,306 @@ int playercin(int number){
 	}
 }
 
+int weizhi(int x){
+	if(x == 1){
+		if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
+			atplace = 0;
+		}else{		
+			atplace = 1;
+		}
+	}else if(x == 2){
+		if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
+			atplace = 0;
+		}else{
+			atplace = 2;
+		}
+	}else if(x == 3){
+		if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
+			atplace = 0;
+		}else{
+			atplace = 3;
+		}
+	}else if(x == 4){
+		if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
+			atplace = 0;
+		}else{
+			atplace = 4;
+		}
+	}else if(x == 5){
+		if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
+			atplace = 0;
+		}else{
+			atplace = 5;
+		}
+	}else if(x == 6){
+		if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
+			atplace = 0;
+		}else{
+			atplace = 6;
+		}
+	}else if(x == 7){
+		if(qipan[7][1] != 0 && qipan[7][2] != 0 && qipan[7][3] != 0 && qipan[8][1] != 0 && qipan[8][2] != 0 && qipan[8][3] != 0 && qipan[9][1] != 0 && qipan[9][2] != 0 && qipan[9][3] != 0 ){	
+			atplace = 0;
+		}else{
+			atplace = 7;
+		}
+	}else if(x == 8){
+		if(qipan[7][4] != 0 && qipan[7][5] != 0 && qipan[7][6] != 0 && qipan[8][4] != 0 && qipan[8][5] != 0 && qipan[8][6] != 0 && qipan[9][4] != 0 && qipan[9][5] != 0 && qipan[9][6] != 0 ){	
+			atplace = 0;
+		}else{
+			atplace = 8;
+		}
+	}else{
+		if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
+			atplace = 0;
+		}else{
+			atplace = 9;
+		}
+	}
+} 
+
 int ap(int x,int y){
 	if(x >= 1 && x <=3 && y >= 1 && y <= 3){
 		if(x == y){
 			if(x == 2){
-				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 5;
-				}
+				weizhi(5);
 			}else if(x == 1){
-				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
-					atplace = 0;
-				}else{		
-					atplace = 1;
-				}		
+				weizhi(1);		
 			}else{
-				if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 9;
-				}	
+				weizhi(9);	
 			}
 		}else if(x - y == 1){
 			if(x == 2){
-				if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 4;
-				}
+				weizhi(4);
 			}else{
-				if(qipan[7][4] != 0 && qipan[7][5] != 0 && qipan[7][6] != 0 && qipan[8][4] != 0 && qipan[8][5] != 0 && qipan[8][6] != 0 && qipan[9][4] != 0 && qipan[9][5] != 0 && qipan[9][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 8;
-				}
+				weizhi(8);
 			}
 		}else if(x - y == -1){
 			if(x == 1){
-				if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 2;
-				}
+				weizhi(2);
 			}else{
-				if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 6;
-				}
+				weizhi(6);
 			}
 		}else if(x == 3){
-			if(qipan[7][1] != 0 && qipan[7][2] != 0 && qipan[7][3] != 0 && qipan[8][1] != 0 && qipan[8][2] != 0 && qipan[8][3] != 0 && qipan[9][1] != 0 && qipan[9][2] != 0 && qipan[9][3] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 7;
-			}
+			weizhi(7);
 		}else{
-			if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
-				atplace = 0;
-			}else{
-			atplace = 3;
-			}
+			weizhi(3);
 		}
 	}
 	if(x >= 1 && x <=3 && y >= 4 && y <= 6){
 		if(x+3 == y){
 			if(x == 2){
-				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 5;
-				}
+				weizhi(5);
 			}else if(x == 1){
-				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 1;
-				}
+				weizhi(1);
 			}else{
-				if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 9;
-				}
+				weizhi(9);
 			}
 		}else if(x - y == -2){
 			if(x == 2){
-				if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 4;
-				}
+				weizhi(4);
 			}else{
-				if(qipan[7][4] != 0 && qipan[7][5] != 0 && qipan[7][6] != 0 && qipan[8][4] != 0 && qipan[8][5] != 0 && qipan[8][6] != 0 && qipan[9][4] != 0 && qipan[9][5] != 0 && qipan[9][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 8;
-				}
+				weizhi(8);
 			}
 		}else if(x - y == -4){
 			if(x == 1){
-				if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 2;
-				}
+				weizhi(2);
 			}else{
-				if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 6;
-				}
+				weizhi(6);
 			}
 		}else if(x == 3){
-			if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 7;
-			}
+			weizhi(7);
 		}else{
-			if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 3;
-			}
+			weizhi(3);
 		}
 	}
 	if(x >= 1 && x <=3 && y >= 7 && y <= 9){
 		if(x+6 == y){
 			if(x == 2){
-				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 5;
-				}
+				weizhi(5);
 			}else if(x == 1){
-				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 1;
-				}
+				weizhi(1);
 			}else{
-				if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 9;
-				} 
+				weizhi(9);
 			}
 		}else if(x - y == -5){
 			if(x == 2){
-				if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 4;
-				}
+				weizhi(4);
 			}else{
-				if(qipan[7][4] != 0 && qipan[7][5] != 0 && qipan[7][6] != 0 && qipan[8][4] != 0 && qipan[8][5] != 0 && qipan[8][6] != 0 && qipan[9][4] != 0 && qipan[9][5] != 0 && qipan[9][6] != 0 ){	
-					atplace = 0;
-				}else{	
-					atplace = 8;
-				}
+				weizhi(8);
 			}
 		}else if(x - y == -7){
 			if(x == 1){
-				if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 2;
-				}
+				weizhi(2);
 			}else{
-				if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 6;
-				}
+				weizhi(6);
 			}
 		}else if(x == 3){
-			if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 7;
-			}
+			weizhi(7);
 		}else{
-			if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 3;
-			}
+			weizhi(3);
 		}
 	}
 	if(x >= 4 && x <=6 && y >= 1 && y <= 3){
 		if(x-3 == y){
 			if(x == 5){
-				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 5;
-				}
+				weizhi(5);
 			}else if(x == 4){
-				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 1;
-				}
+				weizhi(1);
 			}else{
-				if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 9;
-				}
+				weizhi(9);
 			}
 		}else if(x - y == 4){
 			if(x == 5){
-				if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 4;
-				}
+				weizhi(4);
 			}else{
-				if(qipan[7][4] != 0 && qipan[7][5] != 0 && qipan[7][6] != 0 && qipan[8][4] != 0 && qipan[8][5] != 0 && qipan[8][6] != 0 && qipan[9][4] != 0 && qipan[9][5] != 0 && qipan[9][6] != 0 ){	
-					atplace = 0;
-				}else{	
-					atplace = 8;
-				}
+				weizhi(8);
 			}
 		}else if(x - y == 2){
 			if(x == 4){
-				if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 2;
-				}
+				weizhi(2);
 			}else{
-				if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 6;
-				}
+				weizhi(6);
 			}
 		}else if(x == 6){
-			if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 7;
-			}
+			weizhi(7);
 		}else{
-			if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 3;
-			}
+			weizhi(3);
 		}
 	}
 	if(x >= 4 && x <=6 && y >= 4 && y <= 6){
 		if(x == y){
 			if(x == 5){
-				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 5;
-				}
+				weizhi(5);
 			}else if(x == 4){
-				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 1;
-				}
+				weizhi(1);
 			}else{
-				if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 9;
-				}
+				weizhi(9);
 			}
 		}else if(x - y == 1){
 			if(x == 5){
-				if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 4;
-				}
+				weizhi(4);
 			}else{
-				if(qipan[7][4] != 0 && qipan[7][5] != 0 && qipan[7][6] != 0 && qipan[8][4] != 0 && qipan[8][5] != 0 && qipan[8][6] != 0 && qipan[9][4] != 0 && qipan[9][5] != 0 && qipan[9][6] != 0 ){	
-					atplace = 0;
-				}else{	
-					atplace = 8;
-				}
+				weizhi(8);
 			}
 		}else if(x - y == -1){
 			if(x == 4){
-				if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 2;
-				}
+				weizhi(2);
 			}else{
-				if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 6;
-				}
+				weizhi(6);
 			}
 		}else if(x == 6){
-			if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 7;
-			}
+			weizhi(7);
 		}else{
-			if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 3;
-			}
+			weizhi(3);
 		}
 	}
 	if(x >= 4 && x <=6 && y >= 7 && y <= 9){
 		if(x+3 == y){
 			if(x == 5){
-				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 5;
-				}
+				weizhi(5);
 			}else if(x == 4){
-				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 1;
-				}
+				weizhi(1);
 			}else{
-				if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 9;
-				}
+				weizhi(9);
 			}
 		}else if(x - y == -2){
 			if(x == 5){
-				if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 4;
-				}
+				weizhi(4);
 			}else{
-				if(qipan[7][4] != 0 && qipan[7][5] != 0 && qipan[7][6] != 0 && qipan[8][4] != 0 && qipan[8][5] != 0 && qipan[8][6] != 0 && qipan[9][4] != 0 && qipan[9][5] != 0 && qipan[9][6] != 0 ){	
-					atplace = 0;
-				}else{	
-					atplace = 8;
-				}
+				weizhi(8);
 			}
 		}else if(x - y == -4){
 			if(x == 4){
-				if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 2;
-				}
+				weizhi(2);
 			}else{
-				if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 6;
-				}
+				weizhi(6);
 			}
 		}else if(x == 6){
-			if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 7;
-			}
+			weizhi(7);
 		}else{
-			if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 3;
-			}
+			weizhi(3);
 		}
 	}
 	if(x >= 7 && x <=9 && y >= 1 && y <= 3){
 		if(x-6 == y){
 			if(x == 8){
-				atplace = 5;
+				weizhi(5);
 			}else if(x == 7){
-				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 1;
-				}
+				weizhi(1);
 			}else{
-				if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 9;
-				}
+				weizhi(9);
 			}
 		}else if(x - y == 7){
 			if(x == 8){
-				if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 4;
-				}
+				weizhi(4);
 			}else{
-				if(qipan[7][4] != 0 && qipan[7][5] != 0 && qipan[7][6] != 0 && qipan[8][4] != 0 && qipan[8][5] != 0 && qipan[8][6] != 0 && qipan[9][4] != 0 && qipan[9][5] != 0 && qipan[9][6] != 0 ){	
-					atplace = 0;
-				}else{	
-					atplace = 8;
-				}
+				weizhi(8);
 			}
 		}else if(x - y == 5){
 			if(x == 7){
-				if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 2;
-				}
+				weizhi(2);
 			}else{
-				if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 6;
-				}
+				weizhi(6);
 			}
 		}else if(x == 9){
-			if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 7;
-			}
+			weizhi(7);
 		}else{
-			if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 3;
-			}
+			weizhi(3);
 		}
 	}
 	if(x >= 7 && x <=9 && y >= 4 && y <= 6){
 		if(x-3 == y){
 			if(x == 8){
-				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 5;
-				}
+				weizhi(5);
 			}else if(x == 7){
-				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 1;
-				}
+				weizhi(1);
 			}else{
-				if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 9;
-				}
+				weizhi(9);
 			}
 		}else if(x - y == 4){
 			if(x == 8){
-				if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 4;
-				}
+				weizhi(4);
 			}else{
-				if(qipan[7][4] != 0 && qipan[7][5] != 0 && qipan[7][6] != 0 && qipan[8][4] != 0 && qipan[8][5] != 0 && qipan[8][6] != 0 && qipan[9][4] != 0 && qipan[9][5] != 0 && qipan[9][6] != 0 ){	
-					atplace = 0;
-				}else{	
-					atplace = 8;
-				}
+				weizhi(8);
 			}
 		}else if(x - y == 2){
 			if(x == 7){
-				if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 2;
-				}
+				weizhi(2);
 			}else{
-				if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 6;
-				}
+				weizhi(6);
 			}
 		}else if(x == 9){
-			if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 7;
-			}
+			weizhi(7);
 		}else{
-			if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 3;
-			}
+			weizhi(3);
 		}
 	}
 	if(x >= 7 && x <=9 && y >= 7 && y <= 9){
 		if(x == y){
 			if(x == 8){
-				if(qipan[4][4] != 0 && qipan[4][5] != 0 && qipan[4][6] != 0 && qipan[5][4] != 0 && qipan[5][6] != 0 && qipan[5][5] != 0 && qipan[6][4] != 0 && qipan[6][5] != 0 && qipan[6][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 5;
-				}
+				weizhi(5);
 			}else if(x == 7){
-				if(qipan[1][1] != 0 && qipan[1][2] != 0 && qipan[1][3] != 0 && qipan[2][1] != 0 && qipan[2][2] != 0 && qipan[2][3] != 0 && qipan[3][1] != 0 && qipan[3][2] != 0 && qipan[3][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 1;
-				}
+				weizhi(1);
 			}else{
-				if(qipan[7][7] != 0 && qipan[7][8] != 0 && qipan[7][9] != 0 && qipan[8][7] != 0 && qipan[8][8] != 0 && qipan[8][9] != 0 && qipan[9][7] != 0 && qipan[9][8] != 0 && qipan[9][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 9;
-				}
+				weizhi(9);
 			}
 		}else if(x - y == 1){
 			if(x == 8){
-				if(qipan[4][1] != 0 && qipan[4][2] != 0 && qipan[4][3] != 0 && qipan[5][1] != 0 && qipan[5][2] != 0 && qipan[5][3] != 0 && qipan[6][1] != 0 && qipan[6][2] != 0 && qipan[6][3] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 4;
-				}
+				weizhi(4);
 			}else{
-				atplace = 8;
+				weizhi(8);
 			}
 		}else if(x - y == -1){
 			if(x == 7){
-				if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 2;
-				}
+				weizhi(2);
 			}else{
-				if(qipan[4][7] != 0 && qipan[4][8] != 0 && qipan[4][9] != 0 && qipan[5][7] != 0 && qipan[5][8] != 0 && qipan[5][9] != 0 && qipan[6][7] != 0 && qipan[6][8] != 0 && qipan[6][9] != 0 ){	
-					atplace = 0;
-				}else{
-					atplace = 6;
-				}
+				weizhi(6);
 			}
 		}else if(x == 9){
-			if(qipan[1][4] != 0 && qipan[1][5] != 0 && qipan[1][6] != 0 && qipan[2][4] != 0 && qipan[2][5] != 0 && qipan[2][6] != 0 && qipan[3][4] != 0 && qipan[3][5] != 0 && qipan[3][6] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 7;
-			}
+			weizhi(7);
 		}else{
-			if(qipan[1][7] != 0 && qipan[1][8] != 0 && qipan[1][9] != 0 && qipan[2][7] != 0 && qipan[2][8] != 0 && qipan[2][9] != 0 && qipan[3][7] != 0 && qipan[3][8] != 0 && qipan[3][9] != 0 ){	
-				atplace = 0;
-			}else{
-				atplace = 3;
-			}
+			weizhi(3);
 		}
 	}
 }
