@@ -979,13 +979,13 @@ int main(){
 						}
 					}
 				}
-				if(game == true){
-					cout<<endl;
-					print();
-					cout<<"Congratuations! player1 wins!"<<endl;
-					over = true;
-					return 0;
-				}
+			}
+			if(game == true){
+				cout<<endl;
+				print();
+				cout<<"Congratuations! player1 wins!"<<endl;
+				over = true;
+				return 0;
 			}
 		}
 		//横着三个胜利
@@ -1001,14 +1001,14 @@ int main(){
 						}
 					}
 				}
-				if(game == true){
-					cout<<endl;
-					print();
-					cout<<"Congratuations! player1 wins!"<<endl;
-					over = true;
-					return 0;
-				} 
 			}
+			if(game == true){
+				cout<<endl;
+				print();
+				cout<<"Congratuations! player1 wins!"<<endl;
+				over = true;
+				return 0;
+			} 
 		}
 		//竖着三个胜利
 		
@@ -1097,13 +1097,13 @@ int main(){
 						}
 					}
 				}
-				if(game == true){
-					cout<<endl;
-					print();
-					cout<<"Congratuations! player2 wins!"<<endl;
-					over = true;
-					return 0;
-				}
+			}
+			if(game == true){
+				cout<<endl;
+				print();
+				cout<<"Congratuations! player2 wins!"<<endl;
+				over = true;
+				return 0;
 			}
 		}
 		//横着三个胜利
@@ -1119,14 +1119,14 @@ int main(){
 						}
 					}
 				}
-				if(game == true){
-					cout<<endl;
-					print();
-					cout<<"Congratuations! player2 wins!"<<endl;
-					over = true;
-					return 0;
-				} 
 			}
+			if(game == true){
+				cout<<endl;
+				print();
+				cout<<"Congratuations! player2 wins!"<<endl;
+				over = true;
+				return 0;
+			} 
 		}
 		//竖着三个胜利
 		
