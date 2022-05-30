@@ -970,8 +970,8 @@ int main(){
 		ap(x11,y11);
 		game = true ;
 		for(int a = 1;a<=7;a=a+3){
+			game = true;	
 			for(int b = 1;b<=7;b=b+3){
-				game = true;	
 				for(int i=a;i<=a+2;i++){
 					for(int j=b;j<=b+2;j++){
 						if(qipan[i][j] == 0 || qipan[i][j] == 2){
@@ -992,8 +992,8 @@ int main(){
 		
 		game = true;
 		for(int a = 1;a<=7;a=a+3){
+			game = true;
 			for(int b = 1;b<=7;b=b+3){	
-				game = true;
 				for(int i=b;i<=b+2;i++){
 					for(int j=a;j<=a+2;j++){
 						if(qipan[i][j] == 0 || qipan[i][j] == 2){
@@ -1088,8 +1088,8 @@ int main(){
 		ap(x22,y22);
 		game = true;
 		for(int a = 1;a<=7;a=a+3){
+			game = true;
 			for(int b = 1;b<=7;b=b+3){	
-				game = true;
 				for(int i=a;i<=a+2;i++){
 					for(int j=b;j<=b+2;j++){
 						if(qipan[i][j] == 0 || qipan[i][j] == 1){
@@ -1110,8 +1110,8 @@ int main(){
 		
 		game = true;
 		for(int b = 1;b<=7;b=b+3){
+			game = true;
 			for(int a = 1;a<=7;a=a+3){	
-				game = true;
 				for(int i=b;i<=b+2;i++){
 					for(int j=a;j<=a+2;j++){
 						if(qipan[i][j] == 0 || qipan[i][j] == 1){
