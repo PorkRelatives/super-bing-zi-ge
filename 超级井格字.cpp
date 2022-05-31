@@ -4,6 +4,8 @@ using namespace std;
 int qipan[10][10],a,b,x11,y11,x22,y22,atplace; 
 bool over = false,time1 = false,time2 = false;
 bool start[3]={false};
+bool game = true;
+
 int print(){
 	for(int i = 1;i <= 9;i ++ ){
 		for(int j = 1;j <= 9;j ++ ){
@@ -27,6 +29,50 @@ int print(){
 			cout << endl << "------+------+------";
 		}
 		cout << endl;
+	}
+} 
+
+int shenli(int ab,int ac){
+	if(ac == 1){
+		for(int a = 1;a<=7;a=a+3){
+			game = true;
+			for(int b = 1;b<=7;b=b+3){	
+				for(int i=a;i<=a+2;i++){
+					for(int j=b;j<=b+2;j++){
+						if(qipan[i][j] == 0 || qipan[i][j] == ab){
+							game = false;
+						}
+					}
+				}
+			}
+			if(game == true){
+				cout<<endl;
+				print();
+				cout<<"Congratuations! player2 wins!"<<endl;
+				over = true;
+				return 0;
+			}
+		}
+	}else{
+		for(int b = 1;b<=7;b=b+3){
+			game = true;
+			for(int a = 1;a<=7;a=a+3){	
+				for(int i=b;i<=b+2;i++){
+					for(int j=a;j<=a+2;j++){
+						if(qipan[i][j] == 0 || qipan[i][j] == ab){
+							game = false;
+						}
+					}
+				}
+			}
+			if(game == true){
+				cout<<endl;
+				print();
+				cout<<"Congratuations! player2 wins!"<<endl;
+				over = true;
+				return 0;
+			} 
+		}
 	}
 } 
 
@@ -524,7 +570,6 @@ int main(){
 	cout<<endl<<"NOW START!"<<endl;
 	print();
 	for(int iii = 1;over == false ; iii){
-		bool game = true;
 		start[1] = false;
 		start[2] = false;
 		for(int jjj = 1;start[1] == false ; jjj){	
@@ -582,48 +627,10 @@ int main(){
 			}
 		}
 		ap(x11,y11);
-		game = true ;
-		for(int a = 1;a<=7;a=a+3){
-			game = true;	
-			for(int b = 1;b<=7;b=b+3){
-				for(int i=a;i<=a+2;i++){
-					for(int j=b;j<=b+2;j++){
-						if(qipan[i][j] == 0 || qipan[i][j] == 2){
-							game = false;
-						}
-					}
-				}
-			}
-			if(game == true){
-				cout<<endl;
-				print();
-				cout<<"Congratuations! player1 wins!"<<endl;
-				over = true;
-				return 0;
-			}
-		}
+		shenli(2,1);
 		//横着三个胜利
 		
-		game = true;
-		for(int a = 1;a<=7;a=a+3){
-			game = true;
-			for(int b = 1;b<=7;b=b+3){	
-				for(int i=b;i<=b+2;i++){
-					for(int j=a;j<=a+2;j++){
-						if(qipan[i][j] == 0 || qipan[i][j] == 2){
-							game = false;
-						}
-					}
-				}
-			}
-			if(game == true){
-				cout<<endl;
-				print();
-				cout<<"Congratuations! player1 wins!"<<endl;
-				over = true;
-				return 0;
-			} 
-		}
+		shenli(2,2);
 		//竖着三个胜利
 		
 		game = true;
@@ -701,47 +708,10 @@ int main(){
 		}
 		ap(x22,y22);
 		//game = true;
-		for(int a = 1;a<=7;a=a+3){
-			game = true;
-			for(int b = 1;b<=7;b=b+3){	
-				for(int i=a;i<=a+2;i++){
-					for(int j=b;j<=b+2;j++){
-						if(qipan[i][j] == 0 || qipan[i][j] == 1){
-							game = false;
-						}
-					}
-				}
-			}
-			if(game == true){
-				cout<<endl;
-				print();
-				cout<<"Congratuations! player2 wins!"<<endl;
-				over = true;
-				return 0;
-			}
-		}
+		shenli(1,1);
 		//横着三个胜利
 		
-		//game = true;
-		for(int b = 1;b<=7;b=b+3){
-			game = true;
-			for(int a = 1;a<=7;a=a+3){	
-				for(int i=b;i<=b+2;i++){
-					for(int j=a;j<=a+2;j++){
-						if(qipan[i][j] == 0 || qipan[i][j] == 1){
-							game = false;
-						}
-					}
-				}
-			}
-			if(game == true){
-				cout<<endl;
-				print();
-				cout<<"Congratuations! player2 wins!"<<endl;
-				over = true;
-				return 0;
-			} 
-		}
+		shenli(1,2);
 		//竖着三个胜利
 		
 		//game = true;
