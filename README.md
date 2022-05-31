@@ -36,7 +36,7 @@ When player2 type in the "2 3",then the chart will like this:
 0 0 0 | 0 0 0 | 0 0 0                                   
 0 0 0 | 0 0 0 | 0 0 0                                   
 0 0 0 | 0 0 0 | 0 0 0                                   
-When the small chart is like this,player1 gets this chart.
+When the small chart is like this,player1 gets this chart.   
 0 O 0 | 0 0 0 | 0 0 0                                    
 0 O 0 | 0 0 0 | 0 0 0                                   
 0 O 0 | 0 0 0 | 0 0 0                                   
