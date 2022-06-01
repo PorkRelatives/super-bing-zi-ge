@@ -569,7 +569,7 @@ int main(){
 	
 	cout<<endl<<"NOW START!"<<endl;
 	print();
-	for(int iii = 1;over == false ; iii){
+	for(int iii = 1;over == false || over == true; iii){
 		start[1] = false;
 		start[2] = false;
 		for(int jjj = 1;start[1] == false ; jjj){	
