@@ -21,12 +21,12 @@ int print(){
 			}
 			if(j % 3 == 0 && j != 9){
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
-				cout << "|";
+				cout << "|"  << " ";
 			}
 		}
 		if(i % 3 == 0 && i != 9){
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
-			cout << endl << "------+------+------";
+			cout << endl << "------+-------+-------";
 		}
 		cout << endl;
 	}
