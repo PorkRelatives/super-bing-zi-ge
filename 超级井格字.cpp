@@ -49,7 +49,8 @@ int shenli(int ab,int ac){
 				cout<<endl;
 				print();
 				cout<<"Congratuations! player2 wins!"<<endl;
-				over = true;
+				over = true; 
+				system("pause"); 
 				return 0;
 			}
 		}
@@ -70,6 +71,7 @@ int shenli(int ab,int ac){
 				print();
 				cout<<"Congratuations! player2 wins!"<<endl;
 				over = true;
+				system("pause");
 				return 0;
 			} 
 		}
@@ -646,6 +648,7 @@ int main(){
 			print();
 			cout<<"Congratuations! player1 wins!"<<endl;
 			over = true;
+			system("pause");
 			return 0;
 		} 
 		//斜的三个胜利 
@@ -727,6 +730,7 @@ int main(){
 			print();
 			cout<<"Congratuations! player2 wins!"<<endl;
 			over = true;
+			system("pause");
 			return 0;
 		} 
 		//斜的三个胜利 
